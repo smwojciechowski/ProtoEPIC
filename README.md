@@ -24,3 +24,7 @@ TO-BE-IMPLEMENTED:
 - DocumentView screen:
     - document should show the same project-specific boxes populated with information about the document
     - document should have the ability to upload/download files corresponding to the document profile
+
+- Automatic tests:
+    - unit tests for classes
+    - automatic tests to populate app with projects + documents
