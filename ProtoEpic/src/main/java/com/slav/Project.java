@@ -9,6 +9,10 @@ public class Project {
 
     public Project(){ }
 
+    public Project(String projectName) {
+        this.projectName = projectName;
+    }
+
     public Project(String projectName, List<ProjectDocument> projectDocumentation) {
         this.projectName = projectName;
         this.projectDocumentation = projectDocumentation;
