@@ -12,6 +12,7 @@
         <c:if test="${loggedOut}">
             <b>You have been logged out.</b>
         </c:if>
+        <br/>
         <form method="POST" action="<c:url value="/login" />">
             Username:</br>
             <input type="text" name="username"></br>

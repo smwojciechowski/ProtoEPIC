@@ -11,6 +11,7 @@ public class ProjectDocument {
     private String documentSubType;
     private String responsiblePerson;
     private String documentDescription;
+    private String documentStatus;
 
     private Date statusDate;
     private Date receivedDate;
@@ -101,5 +102,13 @@ public class ProjectDocument {
 
     public void setIssuedDate(Date issuedDate) {
         this.issuedDate = issuedDate;
+    }
+
+    public String getDocumentStatus() {
+        return documentStatus;
+    }
+
+    public void setDocumentStatus(String documentStatus) {
+        this.documentStatus = documentStatus;
     }
 }

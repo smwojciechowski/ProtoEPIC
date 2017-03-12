@@ -1,16 +1,10 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Slawek
-  Date: 2017-03-02
-  Time: 18:46
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--@elvariable id="requestedProject" type="com.slav.Project"--%>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Title</title>
+    <title>${requestedProject}</title>
 </head>
 <body>
-
+Welcome to, the ${requestedProject} view!
 </body>
 </html>

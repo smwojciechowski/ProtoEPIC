@@ -37,7 +37,7 @@ public class LoginServlet extends HttpServlet {
             request.getRequestDispatcher("/WEB-INF/jsp/view/login.jsp")
                     .forward(request, response);
         } else {
-            response.sendRedirect("main");
+            response.sendRedirect("projectBrowser");
         }
     }
 
@@ -49,7 +49,7 @@ public class LoginServlet extends HttpServlet {
                     .equals(request.getParameter("password"))) {
 
             request.setAttribute("loggedUsername", request.getParameter("username"));
-            request.getRequestDispatcher("/WEB-INF/jsp/view/projects.jsp")
+            request.getRequestDispatcher("/projectBrowser")
                     .forward(request, response);
         } else {
             request.setAttribute("loginFailed", true);
