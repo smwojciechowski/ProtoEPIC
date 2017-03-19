@@ -1,6 +1,8 @@
 package com.slav;
 
 import java.util.Date;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class ProjectDocument {
 
@@ -12,6 +14,8 @@ public class ProjectDocument {
     private String responsiblePerson;
     private String documentDescription;
     private String documentStatus;
+
+    private Map<String, Attachment> attachments = new LinkedHashMap<>();
 
     private Date statusDate;
     private Date receivedDate;
@@ -110,5 +114,18 @@ public class ProjectDocument {
 
     public void setDocumentStatus(String documentStatus) {
         this.documentStatus = documentStatus;
+    }
+
+    public Map<String, Attachment> getAttachments() {
+        return attachments;
+    }
+
+    public void setAttachments(Map<String, Attachment> attachments) {
+        this.attachments = attachments;
+    }
+
+    public void addAttachment(Attachment attachment) {
+
+        attachments.put(attachment.getName(), attachment);
     }
 }
