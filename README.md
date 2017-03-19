@@ -2,6 +2,8 @@
 
 - Basic version of ProtoEPIC - a system for managing project documentation.
 
+- ALL BASIC FUNCTIONALITY IMPLEMENTED.
+
 IMPLEMENTED:
 - Login screen for the user to enter his credentials:
     - displaying an error message if the credentials are invalid
