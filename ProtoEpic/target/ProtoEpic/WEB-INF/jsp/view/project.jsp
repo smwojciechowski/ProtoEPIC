@@ -1,4 +1,6 @@
 <%--@elvariable id="requestedProject" type="com.slav.Project"--%>
+<%--@elvariable id="searchDone" type="java.lang.boolean"--%>
+<%--@elvariable id="searchResult" type="java.util.Map"--%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -34,6 +36,20 @@
             Issued Date:<br/>
             <input type="date" name="issuedDate"><br/>
             <input type="submit" value="Find">
-        </form>
+        </form><br/>
+    <c:if test="${searchDone}" >
+        <table frame="box" rules="none">
+        <c:forEach items="${searchResult}" var="entry">
+            <tr>
+            <td>
+                <a href="<c:url value="/documentBrowser">
+                    <c:param name="docName" value="${entry.key}" />
+                </c:url>">
+                    <c:out value="${entry.key}" /></a>
+            </td>
+            </tr>
+        </c:forEach>
+        </table>
+    </c:if>
     </body>
 </html>

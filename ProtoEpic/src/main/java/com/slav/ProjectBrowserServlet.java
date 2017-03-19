@@ -5,6 +5,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -17,6 +18,7 @@ public class ProjectBrowserServlet extends HttpServlet {
 
     public static final Map<String, Project> projectsDatabase = new HashMap<String, Project>();
 
+    //TO-DO: move to a separate ProjectDatabase class (like DocumentDatabase)
     static {
         projectsDatabase.put("Ichthys", new Project("Ichthys"));
         projectsDatabase.put("Kizomba", new Project("Kizomba"));
@@ -28,12 +30,13 @@ public class ProjectBrowserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        HttpSession session = request.getSession();
         String requestedProject = request.getParameter("name");
-        System.out.print(requestedProject);
 
         request.setAttribute("requestedProject", projectsDatabase.get(requestedProject));
         request.getRequestDispatcher("/WEB-INF/jsp/view/project.jsp")
                 .forward(request, response);
+
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

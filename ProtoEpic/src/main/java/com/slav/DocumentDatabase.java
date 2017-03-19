@@ -14,7 +14,7 @@ public class DocumentDatabase {
         docDatabase = new HashMap<String, ProjectDocument>();
 
         for(int i = 0; i < 20; i++) {
-            String randomName = "Project number: " + i;
+            String randomName = "Project number " + i;
             docDatabase.put(randomName, new ProjectDocument(randomName));
         }
         return docDatabase;

@@ -11,8 +11,8 @@ public class DocumentDatabaseTest {
         DocumentDatabase db = new DocumentDatabase();
         db.populateDatabase();
 
-        Assert.assertEquals("Project number: 3", db.filterDatabase("Project number: 3")
-                                                            .get("Project number: 3")
+        Assert.assertEquals("Project number 3", db.filterDatabase("Project number 3")
+                                                            .get("Project number 3")
                                                             .getDocumentName()
         );
     }
