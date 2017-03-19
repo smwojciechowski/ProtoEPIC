@@ -16,11 +16,15 @@ IMPLEMENTED:
  -  ProjectView screen:
     - showing a list of project/document specific fields containing document information
     - basic view of document text fields/boxes implemented
+    - each document from the returned list should be accessible by a link moving the user to the document view
+    
+ - DocumentView screen:
+    - document should have the ability to upload/download files corresponding to the document profile
     
  - Automatic tests:
     - unit tests for classes (started)
-    - automatic tests to populate app with projects + documents (started)
-
+    - automatic tests to populate app with projects + documents
+---------------------------------------------------------------------------------------------------------------------
 TO-BE-IMPLEMENTED:
 - ProjectBrowser screen:
     - according to user rights user/editor/admin offer appropriate edition rights
@@ -28,12 +32,9 @@ TO-BE-IMPLEMENTED:
   
 -  ProjectView screen:
     - boxes should offer the ability to search and find appropriate documents based on the inserted fields
-    - each document from the returned list should be accessible by a link moving the user to the document view
     
 - DocumentView screen:
     - document should show the same project-specific boxes populated with information about the document
-    - document should have the ability to upload/download files corresponding to the document profile
 
 - Automatic tests:
     - unit tests for classes
-    - automatic tests to populate app with projects + documents
